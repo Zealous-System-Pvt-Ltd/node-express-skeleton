@@ -10,11 +10,11 @@ module.exports = {
   timeZone: 'Asia/Calcutta',
   secretKey: 'THIS-SECRET-NEEDS-TO-BE-CHANGE',
   redisconf: { 
-      dbPort: 6379,
+      dbPort: process.env.REDIS_PORT,
       debug: false,
-      dbHost: '127.0.0.1',
+      dbHost: process.env.REDIS_HOST,
       dbOptions: {
-          auth_pass: 'SAMPLE-AUTH-KEY',
+          auth_pass: process.env.REDIS_AUTH_KEY,
           no_ready_check: true,
       }
   },

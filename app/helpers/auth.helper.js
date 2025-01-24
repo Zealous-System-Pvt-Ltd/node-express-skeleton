@@ -3,7 +3,7 @@ let Helper = require('../helpers/common.helper');
 let constants = require(`../../config/${process.env.CONST_FILE}.js`);
 let request = require('request-promise');
 let jwt = require('jsonwebtoken');
-let UserDeviceInformation = require('../models/userDeviceInformation.model');
+// let UserDeviceInformation = require('../models/userDeviceInformation.model');
 
 
 
@@ -41,21 +41,21 @@ module.exports = {
     let tokenErr = {};
     let response = {};
 
-    UserDeviceInformation.findOne({
-      token: tokenfromheader,
-    }).then(
-      response => {
-         if(response){
-           next();
-         }else{
-          res.status(401).send({
-            status: false,
-            message: 'UnAthorize access.',
-            data: '',
-        });
-         }
-      }
-    ).catch(Helper.handleError(res));
+    // UserDeviceInformation.findOne({
+    //   token: tokenfromheader,
+    // }).then(
+    //   response => {
+    //      if(response){
+    //        next();
+    //      }else{
+    //       res.status(401).send({
+    //         status: false,
+    //         message: 'UnAthorize access.',
+    //         data: '',
+    //     });
+    //      }
+    //   }
+    // ).catch(Helper.handleError(res));
   },
 
 };
