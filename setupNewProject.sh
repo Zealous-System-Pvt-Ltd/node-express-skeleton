@@ -16,6 +16,6 @@ npm run format
 # remove pm2-logrotate
 pm2 delete pm2-logrotate
 # start project
-npm run start
+# npm run start
 # # Remove the script file itself
 # rm -- "$0"
