@@ -1,13 +1,6 @@
-## Application Overview
+Got it! Here's how you can update your documentation to include instructions for setting up the `.env` file:
 
-This repository for builing web application using Nodejs with ExpressJS and MongoDB.
-
-You’ll know:
-
-- Model, Controller, Routes and Middleware folder sturecture.
-- Node.js Express Architecture with CORS, Authenticaton & Authorization middlewares.
-- How to configure Express routes to work with JWT
-- How to define Data Models and association for Authentication and Authorization
+---
 
 ## Software Requirements
 
@@ -15,34 +8,53 @@ You’ll know:
 - [ExpressJS](https://www.npmjs.com/package/express)
 - [MongoDB](https://www.mongodb.com/)
 
-## How to install
+## How to Install
 
 ### Using Git (recommended)
 
-1.  Clone the project from github. Change "node-express-skeleton" to your project name.
+1. Clone the project from GitHub. Change `node-express-skeleton` to your project name:
 
-```bash
-git clone https://github.com/Zealous-System-Pvt-Ltd/nodejs.git ./node-express-skeleton
-```
+    ```bash
+    git clone https://github.com/Zealous-System-Pvt-Ltd/nodejs.git ./node-express-skeleton
+    ```
 
-### Using manual download ZIP
+### Using Manual Download ZIP
 
-1.  Download repository
-2.  Uncompress to your desired directory
+1. Download the repository.
+2. Uncompress it to your desired directory.
 
-### Install npm dependencies after installing (Git or manual download)
+### Install npm dependencies after installing (Git or Manual Download)
 
 ```bash
 cd node-express-skeleton
 npm install && npm update
 ```
 
-### Setting up environments
+### Setting up `.env` File
 
-1.  You will find a file named `config/constants.js` on config directory of project. which is used for constants define.
-2.  You will find a file named `config/development.js` & `config/production.js` on config directory of project. based on your environment you can add. You can also create more environment.
+1. Create a `.env` file in the root of your project (same level as `app.js`).
 
-## Project structure
+    Example `.env` file:
+
+    ```env
+    PORT=3000
+    DB_URI=mongodb://localhost:27017/mydatabase
+    JWT_SECRET=your_jwt_secret_key
+    ```
+
+2. The `.env` file is used to store environment-specific variables such as the port number, database URI, and JWT secret. Ensure you **do not commit** this file to version control. To prevent this, add it to `.gitignore`:
+
+    ```bash
+    # .gitignore
+    .env
+    ```
+
+### Setting up Environments for Different Environments (Optional)
+
+1. You will find configuration files `config/development.js` and `config/production.js` in the `config` directory. These are used for environment-specific settings.
+2. You can create additional environment files if needed.
+
+## Project Structure
 
 ```sh
 .
@@ -70,13 +82,20 @@ npm install && npm update
     └── routes
         ├── categories.routes.js
         └── user.routes.js
-
 ```
 
-## How to run
+## How to Run
 
-### Running API server locally
+### Running the API Server Locally
+
+After setting up the `.env` file, run the server with the following command:
 
 ```bash
 node app.js --env development
 ```
+
+This will start the server with the environment variables you set in the `.env` file.
+
+---
+
+With these updates, your documentation will guide users on how to set up the `.env` file properly and integrate it into their project.
