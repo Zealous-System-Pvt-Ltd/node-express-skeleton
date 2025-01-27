@@ -14,40 +14,40 @@ Got it! Here's how you can update your documentation to include instructions for
 
 1. Clone the project from GitHub. Change `node-express-skeleton` to your project name:
 
-    ```bash
-    git clone https://github.com/Zealous-System-Pvt-Ltd/nodejs.git ./node-express-skeleton
-    ```
+   ```bash
+   git clone https://github.com/Zealous-System-Pvt-Ltd/nodejs.git ./node-express-skeleton
+   ```
 
 ### Using Manual Download ZIP
 
 1. Download the repository.
 2. Uncompress it to your desired directory.
 
-### Install npm dependencies after installing (Git or Manual Download)
+### Install & setup boiler-plate project.
 
 ```bash
 cd node-express-skeleton
-npm install && npm update
+sh setupNewProject.sh
 ```
 
 ### Setting up `.env` File
 
 1. Create a `.env` file in the root of your project (same level as `app.js`).
 
-    Example `.env` file:
+   Example `.env` file:
 
-    ```env
-    PORT=3000
-    DB_URI=mongodb://localhost:27017/mydatabase
-    JWT_SECRET=your_jwt_secret_key
-    ```
+   ```env
+   PORT=3000
+   DB_URI=mongodb://localhost:27017/mydatabase
+   JWT_SECRET=your_jwt_secret_key
+   ```
 
 2. The `.env` file is used to store environment-specific variables such as the port number, database URI, and JWT secret. Ensure you **do not commit** this file to version control. To prevent this, add it to `.gitignore`:
 
-    ```bash
-    # .gitignore
-    .env
-    ```
+   ```bash
+   # .gitignore
+   .env
+   ```
 
 ### Setting up Environments for Different Environments (Optional)
 
@@ -60,8 +60,17 @@ npm install && npm update
 .
 ├── app.js
 ├── routes.js
-├── logfile.log
+├── ecosystem.config.js
 ├── package.json
+├── .prettierrc
+├── .env
+├── .gitignore
+├── README.md
+├── setupNewProject.sh
+├── log
+│   ├── bolier-plate-combined.log
+│   ├── bolier-plate-error.log
+│   └── bolier-plate-out.log
 ├── config
 │   ├── constants.js
 │   ├── development.js
@@ -83,6 +92,23 @@ npm install && npm update
         ├── categories.routes.js
         └── user.routes.js
 ```
+
+
+## How to Setup boiler-plate
+
+### Running the API Server Locally
+
+After setting up the `.env` file, run the server with the following command:
+
+```bash
+node app.js --env development
+```
+
+This will start the server with the environment variables you set in the `.env` file.
+
+---
+
+With these updates, your documentation will guide users on how to set up the `.env` file properly and integrate it into their project.
 
 ## How to Run
 
