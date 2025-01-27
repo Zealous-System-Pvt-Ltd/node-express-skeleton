@@ -4,7 +4,8 @@
   "description": "boiler-plate",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
   },
   "author": "Prashant Suthar",
   "license": "ISC",
@@ -60,5 +61,8 @@
     "unique-random": "^1.0.0",
     "winston": "2.4.3",
     "xlsx": "^0.10.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
   }
 }

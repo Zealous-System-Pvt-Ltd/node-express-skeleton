@@ -5,28 +5,31 @@ let Schema = mongoose.Schema;
 let autopopulate = require('mongoose-autopopulate');
 let paginate = require('mongoose-paginate');
 
-let Category = new Schema({
-  name: {
-    type: String,
-    required: true
+let Category = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    priority: {
+      type: Number,
+      default: 0,
+    },
+    isActive: {
+      type: Boolean,
+      default: true,
+    },
+    isDeleted: {
+      type: Boolean,
+      default: false,
+    },
   },
-  description: {
-    type: String,
-    required: true
-  },
-  priority: {
-    type: Number,
-    default: 0
-  },
-  isActive: {
-    type: Boolean,
-    default: true
-  },
-  isDeleted: {
-    type: Boolean,
-    default: false
-  }
-}, {timestamps: true});
+  { timestamps: true }
+);
 
 Category.plugin(autopopulate);
 Category.plugin(paginate);

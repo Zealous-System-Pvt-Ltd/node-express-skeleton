@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-let CategoriesController  = require('../controllers/categories.controller');
+let CategoriesController = require('../controllers/categories.controller');
 let Authentication = require('../helpers/auth.helper');
 
 // Core APIs

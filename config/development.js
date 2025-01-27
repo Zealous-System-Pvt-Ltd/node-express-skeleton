@@ -3,21 +3,19 @@
 let ip = require('ip');
 
 module.exports = {
+  database: {
+    URI: 'mongodb://localhost:27017/sample-project-development',
+  },
+  bodyParser: {
+    urlencoded: { limit: '50mb', extended: true, parameterLimit: 50000 },
+    json: { limit: '50mb' },
+  },
+  scheduler: {
+    enable: false,
+    period: 1, //In Seconds
+  },
 
-    database: {
-      URI: 'mongodb://localhost:27017/sample-project-development'
-    },
-    bodyParser : {
-        urlencoded: {limit: '50mb', extended: true, parameterLimit:50000},
-        json: {limit: '50mb'}
-    },
-    scheduler: {
-        enable: false,
-        period: 1 //In Seconds
-    },
-
-    threshold :{
-        docsLimit: 500000
-    }
-
+  threshold: {
+    docsLimit: 500000,
+  },
 };

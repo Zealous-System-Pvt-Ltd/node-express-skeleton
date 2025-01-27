@@ -3,11 +3,12 @@
 This repository for builing web application using Nodejs with ExpressJS and MongoDB.
 
 You’ll know:
-   - Model, Controller, Routes and Middleware folder sturecture. 
-   - Node.js Express Architecture with CORS, Authenticaton & Authorization middlewares.
-   - How to configure Express routes to work with JWT
-   - How to define Data Models and association for Authentication and Authorization
-   
+
+- Model, Controller, Routes and Middleware folder sturecture.
+- Node.js Express Architecture with CORS, Authenticaton & Authorization middlewares.
+- How to configure Express routes to work with JWT
+- How to define Data Models and association for Authentication and Authorization
+
 ## Software Requirements
 
 - [Node](https://nodejs.org/en/download/)
@@ -41,7 +42,8 @@ npm install && npm update
 1.  You will find a file named `config/constants.js` on config directory of project. which is used for constants define.
 2.  You will find a file named `config/development.js` & `config/production.js` on config directory of project. based on your environment you can add. You can also create more environment.
 
-## Project  structure
+## Project structure
+
 ```sh
 .
 ├── app.js
@@ -68,11 +70,12 @@ npm install && npm update
     └── routes
         ├── categories.routes.js
         └── user.routes.js
-    
+
 ```
+
 ## How to run
 
-### Running  API server locally
+### Running API server locally
 
 ```bash
 node app.js --env development

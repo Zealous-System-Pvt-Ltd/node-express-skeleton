@@ -5,18 +5,20 @@ let request = require('request-promise');
 let jwt = require('jsonwebtoken');
 // let UserDeviceInformation = require('../models/userDeviceInformation.model');
 
-
-
 function getAccessTokenFromHeader(req) {
-  return (req.headers['authorization'] && req.headers['authorization'] !== null ? req.headers['authorization'].split(' ')[1] : null);
+  return req.headers['authorization'] && req.headers['authorization'] !== null
+    ? req.headers['authorization'].split(' ')[1]
+    : null;
 }
 
 function getAccessTokenFromUrl(req) {
-  return (req.query.hasOwnProperty('Authorization') && Helper.getObject(req.query.Authorization) !== null ? req.query.Authorization : null);
+  return req.query.hasOwnProperty('Authorization') &&
+    Helper.getObject(req.query.Authorization) !== null
+    ? req.query.Authorization
+    : null;
 }
 
 module.exports = {
-
   /**
    * Get Token from Request Header
    * @param req
@@ -26,7 +28,6 @@ module.exports = {
   getAccessToken: (req) => {
     return getAccessTokenFromHeader(req) || getAccessTokenFromUrl(req);
   },
-
 
   /**
    * OAuth 2 Token Validation
@@ -57,5 +58,4 @@ module.exports = {
     //   }
     // ).catch(Helper.handleError(res));
   },
-
 };
