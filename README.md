@@ -1,5 +1,3 @@
-Got it! Here's how you can update your documentation to include instructions for setting up the `.env` file:
-
 ---
 
 ## Software Requirements
@@ -124,4 +122,10 @@ This will start the server with the environment variables you set in the `.env` 
 
 ---
 
-With these updates, your documentation will guide users on how to set up the `.env` file properly and integrate it into their project.
+### Want to Learn More? 🤓
+
+If you're interested in diving deeper into Node.js, DevOps, and other tech topics, follow me on Medium for more insightful articles and guides! ✨
+
+👉 [Follow me on Medium!](https://prashant1879.medium.com/) 📚
+
+Stay tuned and keep coding! 👨‍💻👩‍💻
