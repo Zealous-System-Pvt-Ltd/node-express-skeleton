@@ -139,7 +139,7 @@ To manage your PM2 processes, you can use the following commands:
 
 ## 🚀 Boilerplate Repository 📥
 
-Please download the boilerplate repo from this [🔗 link](https://github.com/prashant-suthar-zealous/nodejs-expressjs-boiler-plate) and get started! 🛠️
+Please download the boilerplate repo from this [🔗 link](https://github.com/Zealous-System-Pvt-Ltd/node-express-skeleton) and get started! 🛠️
 
 ---
 

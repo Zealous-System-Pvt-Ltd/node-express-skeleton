@@ -14,7 +14,7 @@
 1. Clone the project from GitHub. Change `node-express-skeleton` to your project name:
 
    ```bash
-   git clone https://github.com/Zealous-System-Pvt-Ltd/nodejs.git ./node-express-skeleton
+   git clone https://github.com/Zealous-System-Pvt-Ltd/node-express-skeleton ./node-express-skeleton
    ```
 
 ### Using Manual Download ZIP
